@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var weight: String
+    
     var body: some View {
         VStack(spacing: 30) {
             Spacer()
@@ -32,6 +33,8 @@ struct ContentView: View {
             
             
             VStack {
+                TextField("Weight", text: $weight)
+                
                 HStack {
                     Text("Weight:")
                     TextField("Weight", text: .constant(""))
@@ -48,9 +51,11 @@ struct ContentView: View {
             
             Button("Calculate") {
     
-            }.buttonStyle(.borderedProminent)
-                .font(.largeTitle)
-                .padding()
+            }
+            .buttonStyle(.borderedProminent)
+            
+
+                .font(.title)
             
             Spacer()
         }
